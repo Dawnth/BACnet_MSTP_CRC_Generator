@@ -33,9 +33,9 @@ namespace MyCRC
             }
 
             //crcValue = CRC8_2(0x81, OriginArray);
-            
-            textBox2.Text = Convert.ToString(crcValue, 16).ToUpper();
-            textBox3.Text = Convert.ToString((0xff - crcValue), 16).ToUpper();
+
+            textBox2.Text = Convert.ToString(crcValue, 16);//.ToUpper();
+            textBox3.Text = Convert.ToString((0xff - crcValue), 16);//.ToUpper();
         }
         /* Accumulate "dataValue" into the CRC in crcValue.
         / Return value is updated CRC
@@ -66,8 +66,8 @@ namespace MyCRC
 
             //crcValue = CRC8_2(0x81, OriginArray);
 
-            textBox5.Text = Convert.ToString(crcValue, 16).ToUpper();
-            string tmp = Convert.ToString((0xffff - crcValue), 16).ToUpper();
+            textBox5.Text = Convert.ToString(crcValue, 16);//.ToUpper();
+            string tmp = Convert.ToString((0xffff - crcValue), 16);//.ToUpper();
             textBox6.Text = tmp.Substring(2, 2) + " " + tmp.Substring(0, 2);
 
         }
@@ -88,6 +88,10 @@ namespace MyCRC
 
 
         #region otherCRCAlgorithm
+        // input:
+        //        crcPoly is the low octet of the hex of the crc polynomial
+        //        eg. G(x) = x^8 + x^7 + 1
+        //                                 => (0b) 1 1000 0001 = 0x181 => crcPoly = 0x81
         public static byte CRC8_2(byte crcPoly, string[] buffer)
         {
             byte crc = 0xff;
