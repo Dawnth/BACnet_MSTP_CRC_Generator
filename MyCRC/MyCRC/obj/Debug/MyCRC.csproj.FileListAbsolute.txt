@@ -16,11 +16,23 @@ C:\Users\cvcds\Documents\Visual Studio 2015\Projects\MyCRC\MyCRC\obj\Debug\MyCRC
 C:\Users\cvcds\Documents\Visual Studio 2015\Projects\MyCRC\MyCRC\obj\Debug\MyCRC.Properties.Resources.resources
 C:\Users\cvcds\Documents\Visual Studio 2015\Projects\MyCRC\MyCRC\obj\Debug\MyCRC.csproj.GenerateResource.Cache
 C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\bin\Debug\MyCRC.exe.config
-C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.exe
-C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.pdb
 C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\bin\Debug\MyCRC.exe
 C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\bin\Debug\MyCRC.pdb
-C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.csprojResolveAssemblyReference.cache
 C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.Form1.resources
 C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.Properties.Resources.resources
 C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.csproj.GenerateResource.Cache
+C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.exe
+C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.pdb
+C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.csprojResolveAssemblyReference.cache
+C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.Form2.resources
+C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.Form3.resources
+C:\Users\jchena5\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.Form4.resources
+C:\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\bin\Debug\MyCRC.exe.config
+C:\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.exe
+C:\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.pdb
+C:\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\bin\Debug\MyCRC.exe
+C:\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\bin\Debug\MyCRC.pdb
+C:\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.csprojResolveAssemblyReference.cache
+C:\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.Form1.resources
+C:\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.Properties.Resources.resources
+C:\Projects\dawnth\BACnet_MSTP_CRC_Generator\MyCRC\MyCRC\obj\Debug\MyCRC.csproj.GenerateResource.Cache

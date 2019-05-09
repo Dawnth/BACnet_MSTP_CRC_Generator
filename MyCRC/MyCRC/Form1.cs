@@ -7,35 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 
 namespace MyCRC
 {
     public partial class Form1 : Form
     {
-        //List<byte> OriginArray = new List<byte>();
 
         public Form1()
         {
             InitializeComponent();
         }
-        //[DllImport("DLL_01.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Cdecl)]
-        //private static extern int sum(int a, int b);
 
+        public static string BAC = "BACnet";
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] OriginArray = textBox1.Text.Trim().Split(' ');
-
-            byte crcValue = 0xff;
-            for (int i = 0; i < OriginArray.Length; i++)
+            try
             {
-                crcValue = CalcHeaderCRC(Convert.ToByte(OriginArray[i], 16), crcValue);
+                string tempS = textBox_Header.Text.Replace(" ", "").Replace("	", "").Replace(",", "").Replace("\r\n", "").Trim();
+                if(tempS == "" || tempS.Length % 2 != 0)
+                {
+                    MessageBox.Show("Please check the header!\r\nThe length is not correct!");
+                    return;
+                }
+                int length = tempS.Length / 2;//get lenngth
+                string[] OriginArray = new string[length];
+                for (int i = 0; i < length; i++)
+                {
+                    OriginArray[i] = tempS.Substring(i * 2, 2);
+                }
+
+                byte crcValue = 0xff;
+                for (int i = 0; i < OriginArray.Length; i++)
+                {
+                    crcValue = CalcHeaderCRC(Convert.ToByte(OriginArray[i], 16), crcValue);
+                }
+
+                //crcValue = CRC8_2(0x81, OriginArray);
+
+                textBox2.Text = Convert.ToString(crcValue, 16);//.ToUpper();
+                textBox3.Text = Convert.ToString((0xff - crcValue), 16);//.ToUpper();
             }
-
-            //crcValue = CRC8_2(0x81, OriginArray);
-
-            textBox2.Text = Convert.ToString(crcValue, 16);//.ToUpper();
-            textBox3.Text = Convert.ToString((0xff - crcValue), 16);//.ToUpper();
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         /* Accumulate "dataValue" into the CRC in crcValue.
         / Return value is updated CRC
@@ -56,20 +71,37 @@ namespace MyCRC
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string[] OriginArray = textBox4.Text.Trim().Split(' ');
-
-            ushort crcValue = 0xffff;
-            for (int i = 0; i < OriginArray.Length; i++)
+            try
             {
-                crcValue = CalcDataCRC(Convert.ToByte(OriginArray[i], 16), crcValue);
+                string tempS = textBox_Data.Text.Replace(" ", "").Replace("	", "").Replace(",", "").Replace("\r\n", "").Trim();
+                if (tempS == "" || tempS.Length % 2 != 0)
+                {
+                    MessageBox.Show("Please check the data!\r\nThe length is not correct!");
+                    return;
+                }
+                int length = tempS.Length / 2;//get lenngth
+                string[] OriginArray = new string[length];
+                for (int i = 0; i < length; i++)
+                {
+                    OriginArray[i] = tempS.Substring(i * 2, 2);
+                }
+
+                ushort crcValue = 0xffff;
+                for (int i = 0; i < OriginArray.Length; i++)
+                {
+                    crcValue = CalcDataCRC(Convert.ToByte(OriginArray[i], 16), crcValue);
+                }
+
+                //crcValue = CRC8_2(0x81, OriginArray);
+
+                textBox5.Text = Convert.ToString(crcValue, 16);//.ToUpper();
+                string tmp = Convert.ToString((0xffff - crcValue), 16);//.ToUpper();
+                textBox6.Text = tmp.Substring(2, 2) + "" + tmp.Substring(0, 2);
             }
-
-            //crcValue = CRC8_2(0x81, OriginArray);
-
-            textBox5.Text = Convert.ToString(crcValue, 16);//.ToUpper();
-            string tmp = Convert.ToString((0xffff - crcValue), 16);//.ToUpper();
-            textBox6.Text = tmp.Substring(2, 2) + " " + tmp.Substring(0, 2);
-
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         /* Accumulate "dataValue" into the CRC in crcValue.
         / Return value is updated CRC
